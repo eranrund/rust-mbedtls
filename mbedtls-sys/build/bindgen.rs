@@ -126,6 +126,8 @@ impl super::BuildConfig {
             .blocklist_type("^mbedtls_time_t$")
             .blocklist_function("^mbedtls_platform_win32_vsnprintf$")
             .blocklist_function("^mbedtls_vsnprintf$")
+            .blocklist_function("^mbedtls_platform_set_vsnprintf$")
+            test
             .use_core()
             .ctypes_prefix("::types::raw_types")
             .parse_callbacks(Box::new(MbedtlsParseCallbacks))
