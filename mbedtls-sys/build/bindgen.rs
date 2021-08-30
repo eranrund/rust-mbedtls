@@ -125,7 +125,7 @@ impl super::BuildConfig {
             .allowlist_recursively(false)
             .blocklist_type("^mbedtls_time_t$")
             .blocklist_function("^mbedtls_platform_win32_vsnprintf$")
-            .blocklist_function("^.*mbedtls_vsnprintf$")
+            .blocklist_function("^.*vsnprintf.*$")
             .blocklist_function("^mbedtls_platform_set_vsnprintf$")
             .use_core()
             .ctypes_prefix("::types::raw_types")
